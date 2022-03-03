@@ -2,10 +2,8 @@
   "name": "server",
   "version": "1.0.1",
   "description": "server of vehical stolen",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build server.js",
     "start": "nodemon server.js"
   },
   "author": "kalpesh jadvani",
