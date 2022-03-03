@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "server of vehical stolen",
   "main": "index.js",
   "scripts": {
@@ -10,10 +10,10 @@
   "author": "kalpesh jadvani",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "http-status": "^1.4.2",
-    "mongoose": "^5.9.13",
-    "nodemon": "^2.0.3"
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "http-status": "^1.5.0",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15"
   }
 }

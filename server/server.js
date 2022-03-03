@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
 const port = 8484;
+const dbpass = "stolen_report123";
+const dbusername = "stolen_report";
 const { createDummyRecord } = require('./Utility/DummyInsert');
 const { itSelftAssignCases } = require('./Utility/AssingCases');
 // include routes
@@ -14,11 +16,20 @@ app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/stolen_report_db', {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-});
+const url = `mongodb+srv://${dbusername}:${dbpass}@cluster0.bn45c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const connectionParams={
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+}
+
+mongoose.connect(url,connectionParams);
+
+// this for local 
+// mongoose.connect('mongodb://localhost:27017/stolen_report_db', {
+//   useNewUrlParser: true,
+//   useCreateIndex: true,
+//   useUnifiedTopology: true,
+// });
 
 const db = mongoose.connection;
 //handle mongo error
