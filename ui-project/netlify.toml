@@ -1,6 +1,6 @@
 [[redirects]]
   from = “/api/*”
-  to = “https://stolenreportbackend.herokuapp.com/api/:splat"
+  to = “https://stolenreportbackend.herokuapp.com"
   status = 200
 [[redirects]]
   from = “/*”
