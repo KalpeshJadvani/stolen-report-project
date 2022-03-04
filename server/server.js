@@ -10,9 +10,6 @@ const dbusername = "stolen_report";
 const { createDummyRecord } = require('./Utility/DummyInsert');
 const { itSelftAssignCases } = require('./Utility/AssingCases');
 
-app.use(cors());
-// app.use(cors({ origin: '*', credentials: true }));
-app.options('*', cors());
 // include routes
 const routes = require('./routes/router');
 
@@ -42,7 +39,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.info('DB connected!');
 });
-
+app.use(cors());
+// app.use(cors({ origin: '*', credentials: true }));
+app.options('*', cors());
 app.use('/', routes);
 
 // catch 404 and forward to error handler
