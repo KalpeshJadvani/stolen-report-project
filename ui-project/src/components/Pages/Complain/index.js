@@ -118,14 +118,6 @@ class Complain extends Component {
     this.props.form.resetFields();
   };
 
-  justCheack = () => {
-
-    fetch("https://stolenreportbackend.herokuapp.com/get_policeofficerslist")
-    .then((data)=> data.json())
-    .then((data)=> console.log(" Data ===>   ",data));
-  
-  }
-
   onChangeNumber = (e, key) => {
     const { value } = e.target;
     const reg = /^-?[0-9]*(\.[0-9]*)?$/;
@@ -368,14 +360,6 @@ class Complain extends Component {
                   onClick={this.onReset}
                 >
                   Clear
-                </Button>
-                <Button
-                  style={{
-                    margin: '0 8px',
-                  }}
-                  onClick={this.justCheack}
-                >
-                  Cheack
                 </Button>
               </Col>
               
