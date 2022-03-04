@@ -8,6 +8,8 @@ const dbpass = "stolen_report123";
 const dbusername = "stolen_report";
 const { createDummyRecord } = require('./Utility/DummyInsert');
 const { itSelftAssignCases } = require('./Utility/AssingCases');
+
+app.use(cors({ origin: '*', credentials: true }));
 // include routes
 const routes = require('./routes/router');
 
