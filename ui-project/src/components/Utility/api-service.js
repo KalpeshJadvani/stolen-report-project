@@ -84,6 +84,9 @@ function fetchNode(url, options) {
     'Content-Type': 'application/json',
   };
 
+  if ( process.env.NODE_ENV==='production'){
+    url = url.replace("/api","https://stolenreportbackend.herokuapp.com");
+  }
   return fetch(url, {
     headers,
     ...options,
