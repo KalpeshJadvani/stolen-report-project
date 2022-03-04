@@ -8,7 +8,7 @@ module.exports = (app) => {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://stolenreportbackend.herokuapp.com/',
+      target: 'https://stolenreportbackend.herokuapp.com',
       changeOrigin: true,
       pathRewrite: {
         '^/api': '/',
